@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 James Kieltyka. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -51,8 +49,8 @@ int main(int argc, char *argv[])
     float param = (float)freq2 / (float)3600000;
     
 
-    FILE *fp;
-    fp=fopen("/Users/james_kieltyka/Documents/data_radio_out.csv", "w");
+    //FILE *fp;
+   //fp=fopen("/Users/james_kieltyka/Documents/data_radio_out.csv", "w");
     //Indefinate Loop to Continue Demodulation
     while(hold != 1){
         if(n < 10001)
@@ -100,13 +98,13 @@ int main(int argc, char *argv[])
         n1 -= n1;
             
         //store data into file
-       fprintf(fp, "%f,", demod_sig);
+      // fprintf(fp, "%f,", demod_sig);
             
         }
    
     }
         else{
- fclose(fp);
+// fclose(fp);
   diff = clock() - start;
  int msec = diff * 1000 / (CLOCKS_PER_SEC);
  printf("Time taken %d seconds %d milliseconds ", msec/1000, msec%1000);
